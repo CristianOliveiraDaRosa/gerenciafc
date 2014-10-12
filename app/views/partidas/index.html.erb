@@ -1,0 +1,47 @@
+
+<div class="admin-header-list">
+  <h3>Lista de partidas</h3>
+  <div class="btn-novo-header">
+      <a class="btn btn-dark" href="/partidas/new">Nova partida</a>
+  </div>
+</div>
+<div class="main_content">
+    <table class="admin-list table table-striped">
+      <thead>
+        <tr>
+          <th>Descricao</th>
+          <th>Tipo</th>
+          <th>Dia semana</th>
+          <th>Ações</th>
+          <th>Outros</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @partidas.each do |partida| %>
+          <tr>
+            <td><%= partida.descricao %></td>
+            <td><%= Partida::TIPOS[partida.tipo] %></td>
+            <td><%= Partida::DIAS_SEMANA[partida.dia_semana] %></td>
+            <td> 
+                  <!-- <%= link_to 'Abrir', partida, class:"btn btn-acao" %> -->
+                  <%= link_to 'Editar', edit_partida_path(partida), class:"btn btn-acao" %>
+                  <%= link_to 'Delete', partida, method: :delete, data: { confirm: 'Confirma ação?' }, class:"btn btn-acao" %>
+            </td>
+            <td>
+                <div id="btn-delete">
+                   <%= link_to 'Jogadores', "/partida/#{partida.id}/jogadores", class:"btn btn-acao" %>
+                </div>
+                <div id="btn-delete">
+                  <%= link_to 'Gera Equipes', "/partida/#{partida.id}/gera_equipes", class:"btn btn-acao" %>
+                </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <br>
+
+</div>
+

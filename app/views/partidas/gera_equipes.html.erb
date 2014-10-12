@@ -1,0 +1,55 @@
+<div class="admin-header-list">
+  <h3>Geração de equipes</h3>
+  <div class="btn-novo-header">
+      <%= link_to 'Voltar', "/partidas", class:"btn btn-dark" %>
+  </div>
+  <div class="btn-novo-header">
+      <%= link_to 'Gera Equipes', "/partida/#{@partida.id}/gera_equipes", class:"btn btn-dark" %>
+  </div>
+</div>
+
+<div class="main_content">
+  <div class="equipe-table">
+        <h2>Equipes A</h2>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Jogador</th>
+              <th>Habilidade</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @equipes[0].get_jogadores.each do |jog| %>
+              <tr>
+                <td><%= jog.nome %></td>
+                <td class="equipe-list-pequeno"><%= jog.habilidade %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+  </div>
+  
+  <div class="equipe-table">
+      <h2>Equipes B</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Jogador</th>
+            <th>Habilidade</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @equipes[1].get_jogadores.each do |jog| %>
+            <tr>
+              <td><%= jog.nome %></td>
+              <td class="equipe-list-pequeno"><%= jog.habilidade %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+  </div>
+</div>

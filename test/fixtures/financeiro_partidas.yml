@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partida_id: 
+  valor_mensalidade: 1
+  valor_quadra: 1
+
+two:
+  partida_id: 
+  valor_mensalidade: 1
+  valor_quadra: 1

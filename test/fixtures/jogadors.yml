@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partida_id: 
+  nome: MyString
+  habilidade: 1
+  hab_defesa: 1
+  hab_meio: 1
+  hab_ataque: 1
+  telefone: MyString
+  email: MyString
+  mensalista: false
+  ativo: false
+
+two:
+  partida_id: 
+  nome: MyString
+  habilidade: 1
+  hab_defesa: 1
+  hab_meio: 1
+  hab_ataque: 1
+  telefone: MyString
+  email: MyString
+  mensalista: false
+  ativo: false

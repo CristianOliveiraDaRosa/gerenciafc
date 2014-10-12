@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @partida.descricao %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @partida.tipo %>
+</p>
+
+<p>
+  <strong>Dia semana:</strong>
+  <%= @partida.dia_semana %>
+</p>
+
+<%= link_to 'Edit', edit_partida_path(@partida) %> |
+<%= link_to 'Back', partidas_path %>

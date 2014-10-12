@@ -1,0 +1,32 @@
+<%= form_for(@usuario) do |f| %>
+  <% if @usuario.errors.any? %>
+    <div class="msg_error">
+      <% @usuario.errors.full_messages.each do |msg| %>
+        <div class="list_message_errors"><%= msg %></div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label      :nome %><br>
+    <%= f.text_field :nome  , value: @usuario.nome %>
+  </div>
+  <div class="field">
+    <%= f.label      :email %><br>
+    <%= f.text_field :email , value: @usuario.email %>
+  </div>
+  <div class="field">
+    <%= f.label      :senha %><br>
+    <%= f.password_field :senha , value: nil %>
+  </div>
+  <div class="field">
+    <%= f.label      "Confirmação" %><br>
+    <%= f.password_field :senha_confirmation, value: nil %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Cria Gerente" %>
+  </div>
+  <div class="cadastre-se">
+    <a class="btn btn-light" href="/gerente/login">Login</a>
+  </div>
+<% end %>

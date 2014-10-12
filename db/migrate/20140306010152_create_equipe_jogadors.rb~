@@ -1,0 +1,10 @@
+class CreateEquipeJogadors < ActiveRecord::Migration
+  def change
+    create_table :equipes_jogadors do |t|
+      t.belongs_to :equipe, index: true
+      t.belongs_to :jogador, index: true
+
+      t.timestamps
+    end
+  end
+end

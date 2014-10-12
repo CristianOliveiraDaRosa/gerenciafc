@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  financeiro_partida_id: 
+  descricao: MyString
+  valor_pagar: 1
+  valor_pago: 1
+  data_pagar: 2014-03-16
+  data_pago: 2014-03-16
+
+two:
+  financeiro_partida_id: 
+  descricao: MyString
+  valor_pagar: 1
+  valor_pago: 1
+  data_pagar: 2014-03-16
+  data_pago: 2014-03-16

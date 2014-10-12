@@ -1,0 +1,62 @@
+<%= form_for @jogador, class: 'form-inline' do |f| %>
+  <% if @jogador.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @jogador.errors.full_messages.each do |msg| %>
+         <div class="list_message_errors"><%= msg %></div>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+      <h3>Dados do jogador</h3>
+     
+          <% if not @jogador.new_record? %>
+              <div id="form-jogador-label-ativo">
+                <%= f.check_box :ativo %>  <%= f.label :ativo %>
+              </div>
+          <% end %>
+      
+      <div class="field">
+        <%= f.label :nome %>
+        <br>
+        <%= f.text_field :nome %>
+      </div>
+      <div class="field">
+        <%= f.label :habilidade %><br>
+        <%= f.select :habilidade, options_for_select(Jogador::HABILIDADES.each_with_index.map { |e, i| [e,i] }, selected: @jogador.habilidade )%>
+      </div>
+      <h3>Dados de Contato</h3>
+      <div class="field">
+        <%= f.label :telefone %><br>
+        <%= f.text_field :telefone %>
+      </div>
+      <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Salvar" %>
+      </div>
+  </div>
+  <!-- <div id="jogador-habilidades">
+      <h3>Habilidades do jogador</h3>
+      <div class="field">
+        <%= f.label "Defesa" %><br>
+        <%= f.select :hab_defesa, options_for_select(Jogador::HABILIDADES.each_with_index.map { |e, i| [e,i] }) %>
+      </div>
+      <div class="field">
+        <%= f.label "Meia" %><br>
+        <%= f.number_field :hab_meio %>
+      </div>
+      <div class="field">
+        <%= f.label "Ataque" %><br>
+        <%= f.number_field :hab_ataque %>
+      </div>
+      <div class="field">
+        <%= f.label :mensalista %> <%= f.check_box :mensalista %>
+        <%= f.label :ativo %> <%= f.check_box :ativo %>
+      </div>
+  </div> -->
+  
+<% end %>

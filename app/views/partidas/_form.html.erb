@@ -1,0 +1,27 @@
+<%= form_for(@partida) do |f| %>
+  <% if @partida.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% @partida.errors.full_messages.each do |msg| %>
+         <div class="list_message_errors"><%= msg %></div>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label       :descricao %><br>
+    <%= f.text_field  :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label    :tipo %><br>
+    <%= f.select   :tipo, options_for_select(Partida::TIPOS.each_with_index.map { |n, i| [n, i] }, selected: @partida.tipo) %>
+  </div>
+  <div class="field">
+    <%= f.label    "Dia" %><br>
+    <%= f.select   :dia_semana, options_for_select(Partida::DIAS_SEMANA.each_with_index.map { |n, i| [n,i] }, selected: @partida.dia_semana) %>
+  </div>
+  <div class="actions">
+    <%= f.submit :salvar %>
+  </div>
+<% end %>

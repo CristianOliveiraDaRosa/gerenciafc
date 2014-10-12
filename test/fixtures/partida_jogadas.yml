@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partida_id: 
+  equipe_id: 
+  placar_equipe_a: 1
+  equipe_id: 
+  placar_equipe_b: 1
+
+two:
+  partida_id: 
+  equipe_id: 
+  placar_equipe_a: 1
+  equipe_id: 
+  placar_equipe_b: 1
