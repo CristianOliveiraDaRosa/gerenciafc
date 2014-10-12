@@ -8,7 +8,7 @@ Try on [gerenciafc.com.br](http://gerenciafc.com.br)
 Clone and Run
 ==========
 
-This example use Mysql, but you can choose your database prefered.
+This example use Mysql, but you can choose your prefered database.
 
 ```
 git clone git@github.com:CristianOliveiraDaRosa/gerenciafc.git
