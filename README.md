@@ -4,14 +4,22 @@ System to automatically select soccer teams
 
 Try on [gerenciafc.com.br](http://gerenciafc.com.br) 
 
-Clone
+
+Clone and Run
 ==========
+
+This example use Mysql, but you can choose your database prefered.
 
 ```
 git clone git@github.com:CristianOliveiraDaRosa/gerenciafc.git
-```
-```
+
+cd gerenciafc
+
 gem install 'mysql2'
+
+rake db:migrate
+
+rails s
 ```
 
 ## Contributing
