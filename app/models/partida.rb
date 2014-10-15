@@ -18,7 +18,7 @@ class Partida < ActiveRecord::Base
        return @equipesPartida     
   end
 
-  def divide_jogadores
+  def divide_jogadores_por_habilidade
      
      begin
         maisHabilidoso  = self.jogadors.maximum(:habilidade);
@@ -28,6 +28,7 @@ class Partida < ActiveRecord::Base
        (menosHabilidoso..maisHabilidoso).each do 
   	    jogadores = self.jogadors.where(habilidade: habilidade)
   	      
+  	      # Sorteia jogadores
           for j in jogadores.map{|x| x.id }.shuffle
         		  jogador = jogadores.find(j)
         		 
@@ -37,11 +38,13 @@ class Partida < ActiveRecord::Base
         		    @equipesPartida[0].adiciona(jogador)
         		 end  
   	      end
-
+          
+          #Para bucar jogador de nível mais baixo na próximo sorteio
   	      habilidade = habilidade - 1
         end
       rescue
-
+          # se não possui nenhum jogador cadastrado para a partida.
+          return
       end
   end 
 
