@@ -13,7 +13,7 @@ class Partida < ActiveRecord::Base
   def gera_equipes
        @equipesPartida = [Equipe.new(descricao: "A"), Equipe.new(descricao: "B")]
        
-       divide_jogadores();
+       divide_jogadores_por_habilidade();
       
        return @equipesPartida     
   end
