@@ -21,6 +21,10 @@ rake db:migrate
 
 rails s
 ```
+How it works?
+==
+
+You can see how gerenciafc distribute the players [here](https://github.com/CristianOliveiraDaRosa/gerenciafc/blob/master/app/models/partida.rb) 
 
 ## Contributing
  
@@ -34,7 +38,7 @@ License
 ====
   The MIT License
 
-	Copyright (c) 2010-2014 Google, Inc. http://angularjs.org
+	Copyright (c) 2010-2014 Primous S. I. http://primous.com.br
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -54,7 +58,10 @@ License
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 	THE SOFTWARE.
  
-  * Cristian Oliveira - www.cristianoliveira.com.br
+ Autors
+ ===
+ 
+ Cristian Oliveira - www.cristianoliveira.com.br
 
 
 
