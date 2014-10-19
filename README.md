@@ -59,7 +59,7 @@ License
 	THE SOFTWARE.
  
  Authors
- ====
+====
  
  Cristian Oliveira - www.cristianoliveira.com.br
 
