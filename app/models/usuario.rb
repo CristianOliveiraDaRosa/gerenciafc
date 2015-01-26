@@ -65,8 +65,8 @@ class Usuario < ActiveRecord::Base
 
       14.times do |i|
            partida.jogadors.create(
-             nome:       "Jogador #{i}",
-             habilidade: rand(1..5),
+              nome:       "Jogador #{i}",
+              habilidade: rand(1..5),
            )
       end
 
@@ -81,11 +81,11 @@ class Usuario < ActiveRecord::Base
   def existe
       usuario = Usuario.where(email: self.email, senha: self.senha).first
       
-			if usuario 
-      	self.id = usuario.id;
+      if usuario 
+          self.id = usuario.id;
       end
 
-      return usuario
+      usuario
   end 
   
 end

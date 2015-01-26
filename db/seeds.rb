@@ -17,10 +17,10 @@
 
 # 12.times do |i|
 #    partida.jogadors.create(nome:"Jogador #{i}",
-# 	   habilidade: rand(1..5),
-# 	   hab_defesa: rand(1..5),
-# 	   hab_meio:   rand(1..5),
-# 	   hab_ataque: rand(1..5)
+#        habilidade: rand(1..5),
+#        hab_defesa: rand(1..5),
+#        hab_meio:   rand(1..5),
+#        hab_ataque: rand(1..5)
 #    )
 
 end

@@ -10,11 +10,11 @@ class Jogador < ActiveRecord::Base
   HABILIDADES = ["Perna de pau", "Mais ou menos", "Bom jogador", "Acima da Média", "Joga muito"]
 
   def desc_mensalista
-  	  if self.mensalista
-  	  	 "Sim"
-  	  else
-  	  	 "Nao"
-  	  end
+        if self.mensalista
+             "Sim"
+        else
+             "Nao"
+        end
   end
 
   def desc_ativo
