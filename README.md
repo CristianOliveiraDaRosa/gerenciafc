@@ -4,7 +4,8 @@ System to automatically select soccer teams
 
 Try on [gerenciafc.com.br](http://gerenciafc.com.br) 
 
-** All the code are in pt-br sorry about that. **
+** The code is in pt-br sorry about that. **
+But if you want to translate it nobody is going to stop you! That's the miracle of Open Source!
 
 
 Clone and Run
